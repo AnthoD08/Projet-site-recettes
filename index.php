@@ -20,9 +20,9 @@ include 'navbar.html';
         <img src="images/slider.jpg" class="slider-background" alt="" />
         <div class="slider-content">
             <form method="POST" action="">
-                <label for="nom_recette">Nom de la recette :</label>
+                <label class="form-recette " for="nom_recette">Nom de la recette :</label>
                 <input type="text" id="nom_recette" name="nom_recette" required>
-                <label for="origine">Origine :</label>
+                <label class="form-recette for=" origine">Origine :</label>
                 <select id="origine" name="origine">
                     <option value="">Sélectionnez une origine</option>
                     <option value="origine1">Origine 1</option>
@@ -30,7 +30,7 @@ include 'navbar.html';
                     <option value="origine3">Origine 3</option>
                 </select>
 
-                <label for="regime">Régimes :</label>
+                <label class="form-recette for=" regime">Régimes :</label>
                 <select id="regime" name="regime">
                     <option value="">Sélectionnez un régime</option>
                     <option value="regime1">Régime 1</option>
