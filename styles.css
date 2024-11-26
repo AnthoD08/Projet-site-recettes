@@ -1,41 +1,122 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    text-align: center;
-    padding-top: 50px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 999;
+  padding-block: 10px;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.07);
+}
+
+.boxed {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: block;
+}
+.header-logo img {
+  width: 70px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.header-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.header-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+.header-menu li:last-child a {
+  background-color: #e44d25;
+  color: #fff;
+}
+
+.aligncenter {
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 120px;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
-form {
-    margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
 
+form {
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+select,
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
 
 .recette {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .recette h2 {
-    margin: 0;
-    color: #333;
-    text-align: center;
-
-    
+  margin: 0;
+  color: #333;
+  text-align: center;
 }
 .recette p {
-    color: #666;
+  color: #666;
 }

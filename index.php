@@ -8,11 +8,30 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
+<?php
+include 'navbar.html';
+?>
+
 <body>
     <h1>Site de Recettes</h1>
     <form method="POST" action="">
         <label for="nom_recette">Nom de la recette :</label>
-        <input type="text" id="nom_recette" name="nom_recette" required>
+        <input type="text" id="nom_recette" name="nom_recette" required><br>
+        <label for="origine">Origine :</label>
+        <select id="origine" name="origine">
+            <option value="">Sélectionnez une origine</option>
+            <option value="origine1">Origine 1</option>
+            <option value="origine2">Origine 2</option>
+            <option value="origine3">Origine 3</option>
+        </select>
+
+        <label for="regime">Régimes :</label><br>
+        <select id="regime" name="regime">
+            <option value="">Sélectionnez un régime</option>
+            <option value="regime1">Régime 1</option>
+            <option value="regime2">Régime 2</option>
+            <option value="regime3">Régime 3</option>
+        </select>
         <input type="submit" value="Rechercher">
     </form>
 </body>
@@ -20,13 +39,12 @@
 
 <?php
 
-include 'connexion.php';
+include 'connexionBDD.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $nom_recette = $_POST['nom_recette'];
-
 
     try {
         $stmt = $pdo->prepare("SELECT * FROM recettes WHERE nom LIKE :nom");
