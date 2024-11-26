@@ -35,7 +35,7 @@ header {
     width: 70px;
   }
 
-  
+
 .header-menu {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ header {
 
 h1 {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 120px;
 }
 
 body {
@@ -76,8 +76,10 @@ body {
   margin: 0;
   padding: 20px;
 }
+
 form {
   margin-bottom: 20px;
+  padding-top: 50px;
 }
 
 .recette {
