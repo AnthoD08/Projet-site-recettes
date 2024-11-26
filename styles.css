@@ -27,6 +27,15 @@ header {
   justify-content: space-between;
 }
 
+
+.header-logo{
+    display: block;
+}
+  .header-logo img{
+    width: 70px;
+  }
+
+  
 .header-menu {
   display: flex;
   align-items: center;
@@ -41,6 +50,17 @@ header {
   box-sizing: border-box;
   transition: 0.2s ease;
 }
+
+.header-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+.header-menu li:last-child a {
+  background-color: #e44d25;
+  color: #fff;
+}
+
+
 .aligncenter {
   align-items: center;
 }
