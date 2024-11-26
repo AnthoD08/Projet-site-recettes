@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
 
 </head>
 
@@ -16,15 +16,16 @@
 
     <?php include 'navbar.html'; ?>
 
+ 
 
     <form action="" method="POST">
-        <label for="variableName">Entrez votre nom :</label><br>
+        <label for="variableName"> Nom :</label><br>
         <input type="text" name="inputName" id="variableName" required>
         <br>
         <label for="inputPassword">Mot de passe :</label>
         <input type="password" id="inputPassword" name="inputPassword" required />
         <br>
-        <button type="submit">Envoyer</button>
+        <input class="button-connexion" type="submit"></input>
     </form>
 
     <!-- Traitement PHP des données du formulaire -->
