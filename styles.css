@@ -73,7 +73,6 @@ h1 {
   padding-top: 120px;
 }
 
-
 .slider {
   width: 100%;
   min-height: 80vh;
@@ -104,10 +103,13 @@ form {
   padding-top: 50px;
 }
 
+.form-recette {
+  color: white;
+}
+
 label {
   display: block;
   margin-bottom: 10px;
-  color: white;
 }
 select,
 input[type="text"],
@@ -136,14 +138,6 @@ input[type="checkbox"] {
 }
 .recette p {
   color: #666;
-}
-
-.form-connexion {
-  width: 100%;
-  padding: 30px;
-  border: 1px solid #f1f1f1;
-  background: #fff;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .container h2 {
@@ -192,3 +186,4 @@ input[type="password"] {
   color: #53af57;
   border: 1px solid #53af57;
 }
+
