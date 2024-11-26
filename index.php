@@ -17,22 +17,21 @@ include 'navbar.html';
     <form method="POST" action="">
         <label for="nom_recette">Nom de la recette :</label>
         <input type="text" id="nom_recette" name="nom_recette" required><br>
-        <label for="pays_origine">Pays d'origine :</label>
-        <select id="pays_origine" name="pays_origine">
-            <option value="">Sélectionnez un pays d'origine</option>
-            <?php foreach ($pays_origine as $pays): ?>
-                <option value="<?php echo htmlspecialchars($pays); ?>"><?php echo htmlspecialchars($pays); ?></option>
-            <?php endforeach; ?>
+        <label for="origine">Origine :</label>
+        <select id="origine" name="origine">
+            <option value="">Sélectionnez une origine</option>
+            <option value="origine1">Origine 1</option>
+            <option value="origine2">Origine 2</option>
+            <option value="origine3">Origine 3</option>
         </select>
 
-        <label for="nom_local">Nom local :</label>
-        <select id="nom_local" name="nom_local">
-            <option value="">Sélectionnez un nom local</option>
-            <?php foreach ($nom_local as $nom): ?>
-                <option value="<?php echo htmlspecialchars($nom); ?>"><?php echo htmlspecialchars($nom); ?></option>
-            <?php endforeach; ?>
+        <label for="regime">Régimes :</label><br>
+        <select id="regime" name="regime">
+            <option value="">Sélectionnez un régime</option>
+            <option value="regime1">Régime 1</option>
+            <option value="regime2">Régime 2</option>
+            <option value="regime3">Régime 3</option>
         </select>
-
         <input type="submit" value="Rechercher">
     </form>
 </body>
@@ -40,7 +39,7 @@ include 'navbar.html';
 
 <?php
 
-include 'connexion.php';
+include 'connexionBDD.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -51,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $pdo->prepare("SELECT * FROM recettes WHERE nom LIKE :nom");
         $stmt->execute(['nom' => '%' . $nom_recette . '%']);
         $recettes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-       
+
 
         if ($recettes) {
             foreach ($recettes as $recette) {
