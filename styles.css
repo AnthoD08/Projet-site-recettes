@@ -27,14 +27,12 @@ header {
   justify-content: space-between;
 }
 
-
-.header-logo{
-    display: block;
+.header-logo {
+  display: block;
 }
-  .header-logo img{
-    width: 70px;
-  }
-
+.header-logo img {
+  width: 70px;
+}
 
 .header-menu {
   display: flex;
@@ -60,7 +58,6 @@ header {
   color: #fff;
 }
 
-
 .aligncenter {
   align-items: center;
 }
@@ -80,6 +77,30 @@ body {
 form {
   margin-bottom: 20px;
   padding-top: 50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+select,
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
 .recette {
