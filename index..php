@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
+<?php
+include 'navbar.html';
+?>
+
 <body>
     <h1>Site de Recettes</h1>
     <form method="POST" action="">
