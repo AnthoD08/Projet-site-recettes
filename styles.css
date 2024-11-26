@@ -3,6 +3,40 @@
     padding: 0;
 }
 
+
+.boxed {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  
+  .flex {
+    display: flex;
+  }
+
+  .space-between {
+    justify-content: space-between;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .header-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+  }
+  .aligncenter {
+    align-items: center;
+  }
+
+
+
 h1{
     text-align: center;
     padding-top: 50px;
@@ -39,3 +73,4 @@ form {
 .recette p {
     color: #666;
 }
+
