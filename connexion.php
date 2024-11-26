@@ -16,17 +16,19 @@
 
     <?php include 'navbar.html'; ?>
 
- 
 
-    <form action="" method="POST">
-        <label for="variableName"> Nom :</label><br>
-        <input type="text" name="inputName" id="variableName" required>
-        <br>
-        <label for="inputPassword">Mot de passe :</label>
-        <input type="password" id="inputPassword" name="inputPassword" required />
-        <br>
-        <input class="button-connexion" type="submit"></input>
-    </form>
+    <div class="form-connexion">
+        <form action="" method="POST">
+            <label for="variableName"> Nom :</label><br>
+            <input type="text" name="inputName" id="variableName" required>
+            <br>
+            <label for="inputPassword">Mot de passe :</label>
+            <input type="password" id="inputPassword" name="inputPassword" required />
+            <br>
+            <input class="button-connexion" type="submit"></input>
+        </form>
+    </div>
+
 
     <!-- Traitement PHP des données du formulaire -->
 
