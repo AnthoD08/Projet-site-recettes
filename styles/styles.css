@@ -7,6 +7,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  display: felx;
 }
 
 header {
@@ -71,7 +72,19 @@ header {
 h1 {
   text-align: center;
   padding-top: 120px;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 120px;
   color: red;
+}
+
+.titre-connexion {
+  text-align: center;
+  color: black;
+  padding-bottom: 30px;
 }
 
 .slider {
@@ -99,12 +112,9 @@ h1 {
   text-align: center;
 }
 
-form {
+.form-recette {
   margin-bottom: 20px;
   padding-top: 50px;
-}
-
-.form-recette {
   color: white;
 }
 
@@ -113,9 +123,7 @@ label {
   margin-bottom: 10px;
 }
 select,
-input[type="text"],
-input[type="number"],
-input[type="checkbox"] {
+input[type="text"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
@@ -123,32 +131,7 @@ input[type="checkbox"] {
   border-radius: 4px;
 }
 
-.recette {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.recette h2 {
-  margin: 0;
-  color: #333;
-  text-align: center;
-}
-.recette p {
-  color: #666;
-}
-
-.container h2 {
-  width: 38%;
-  margin: 0 auto;
-  padding-bottom: 10px;
-}
-
-input[type="text"],
-input[type="password"] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -173,18 +156,51 @@ input[type="password"] {
   border: 1px solid #53af57;
 }
 
-.button-connexion {
-  background-color: #53af57;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
+.recette {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-.button-connexion:hover {
-  background-color: white;
-  color: #53af57;
-  border: 1px solid #53af57;
+
+.recette h2 {
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+.recette p {
+  color: #666;
 }
 
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  color: white;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+footer {
+  background: white;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
