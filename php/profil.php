@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <?php include('includes/navbar.html'); ?>
     <?php
 
@@ -62,7 +62,7 @@
     <!-- Sécurité : on redirige vers la page de formulaire si on n'est pas connecté -->
     <?php
     if (!isset($_SESSION["pseudo"]) || empty($_SESSION["pseudo"])) {
-        header("Location: formulaire.php");
+        header("Location: connexion.php");
     }
     echo ("Bonjour " . $_SESSION["pseudo"] . " ! <br><br>");
     ?>
@@ -74,20 +74,20 @@
     </div>
 
     <!-- Formulaire de téléchargement de la nouvelle photo de profil -->
-
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="profile_pic">Choisir une nouvelle photo de profil :</label>
-        <input type="file" name="profile_pic" id="profile_pic" required>
-        <button type="submit">Mettre à jour la photo</button>
-    </form>
-
+    <div class="form-profil">
+        <form action="" method="post" enctype="multipart/form-data">
+            <label for="profile_pic">Choisir une nouvelle photo de profil :</label>
+            <input type="file" name="profile_pic" id="profile_pic" required>
+            <button type="submit">Mettre à jour la photo</button>
+        </form>
+    </div>
 
 
     <br><br><br>
 
     <a href="deconnexion.php">Se déconnecter</a>
 
-    
+
 
 </body>
 

@@ -185,6 +185,12 @@ input[type="text"] {
   color: white;
 }
 
+.form-profil{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .input-group {
   margin-bottom: 15px;

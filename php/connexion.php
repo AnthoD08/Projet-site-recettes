@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 
 </head>
 
@@ -14,22 +14,23 @@
 
     <?php session_start(); ?>
 
-    <?php include 'navbar.html'; ?>
+    <?php include('includes/navbar.html'); ?>
 
-
-
-    <form action="" method="POST">
-        <label for="variableName"> Nom :</label><br>
-        <input type="text" name="inputName" id="variableName" required>
-        <br>
-        <label for="inputPassword">Mot de passe :</label>
-        <input type="password" id="inputPassword" name="inputPassword" required />
-        <br>
-        <input class="button-connexion" type="submit"></input>
-    </form>
-
-
-
+ 
+    <div class="container">
+        <h2 class="titre-connexion">Connexion</h2>
+        <form action="" method="POST">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="inputName" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="inputPassword" required>
+            </div>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
     <!-- Traitement PHP des données du formulaire -->
 
     <?php
