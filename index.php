@@ -50,7 +50,7 @@
 
                         // Dans le cas où $maRoute[1] est vide (rien après le '/' dans l'URL) ou vaut "toutes", on affiche la page de toutes les recettes
                         case "": case "toutes":
-                            include("./pages/recettes/toutes_les_recettes.html");
+                            include(".//php/toutes_les_recettes.php");
                             break;
                         
                         // Si la valeur de $maRoute[0] n'est pas dans l'un des "case" ci-dessus, on va traiter les autres possibilités
@@ -73,7 +73,7 @@
                     }
 
                 } else {
-                    include("./pages/recettes/toutes_les_recettes.html");
+                    include(".//php/toutes_les_recettes.php");
                 }
                 
                 break;
