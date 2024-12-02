@@ -12,11 +12,10 @@
 
 <body>
 
-    <?php session_start(); ?>
 
     <?php include('includes/navbar.html'); ?>
 
- 
+
     <div class="container">
         <h2 class="titre-connexion">Connexion</h2>
         <form action="" method="POST">
@@ -35,8 +34,10 @@
 
     <?php
 
+    session_start();
     $bonPseudo = "anthony";
     $bonMotDePasse = "123";
+
 
     // Si le formulaire a été envoyé
     if ($_POST) {

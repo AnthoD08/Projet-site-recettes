@@ -21,7 +21,7 @@ $_SESSION["pseudo"] = "anthony";
 // Dossier pour stocker les photos téléchargées
 $uploadDir = "uploads/";
 // Nom par défaut pour la photo de profil
-$defaultProfilePic = "profile.png"; // Image par défaut, à ajouter dans le dossier uploads
+$defaultProfilePic = "profile.jpg"; // Image par défaut, à ajouter dans le dossier uploads
 
 
 

@@ -18,20 +18,20 @@
             
             // Dans le cas où $maRoute[0] est vide ou vaut "accueil", on affiche la page d'accueil
             case "": case "accueil":
-                include(".//php/accueil.php");
+                include("./php/accueil.php");
                 break;
 
             // Dans le cas où $maRoute[0] vaut "contact", on affiche la page de contact
             case "contact":
-                include(".//php/contact.php");
+                include("./php/contact.php");
                 break;
 
             case "connexion":
-                include(".//php/connexion.php");
+                include("./php/connexion.php");
                 break;
 
             case "profil.php":
-                include(".//php/profil.php");
+                include("./php/profil.php");
                 break;
                 
          
@@ -51,7 +51,7 @@
 
                         // Dans le cas où $maRoute[1] est vide (rien après le '/' dans l'URL) ou vaut "toutes", on affiche la page de toutes les recettes
                         case "": case "toutes":
-                            include(".//php/toutes_les_recettes.php");
+                            include("./php/toutes_les_recettes.php");
                             break;
                         
                         // Si la valeur de $maRoute[0] n'est pas dans l'un des "case" ci-dessus, on va traiter les autres possibilités
@@ -74,7 +74,7 @@
                     }
 
                 } else {
-                    include(".//php/toutes_les_recettes.php");
+                    include("./php/toutes_les_recettes.php");
                 }
                 
                 break;

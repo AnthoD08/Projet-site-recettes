@@ -10,8 +10,8 @@
 
 <body>
     <?php session_start(); ?>
-   
-   <?php include('includes/navbar.html'); ?>
+
+    <?php include('includes/navbar.html'); ?>
 
 
     <div class="slider">
@@ -21,21 +21,6 @@
             <form class="form-recette" method="POST" action="">
                 <label for="nom_recette">Nom de la recette :</label>
                 <input type="text" id="nom_recette" name="nom_recette" required>
-                <label for="origine">Origine :</label>
-                <select id="origine" name="origine">
-                    <option value="">Sélectionnez une origine</option>
-                    <option value="origine1">Origine 1</option>
-                    <option value="origine2">Origine 2</option>
-                    <option value="origine3">Origine 3</option>
-                </select>
-
-                <label for="regime">Régimes :</label>
-                <select id="regime" name="regime">
-                    <option value="">Sélectionnez un régime</option>
-                    <option value="regime1">Régime 1</option>
-                    <option value="regime2">Régime 2</option>
-                    <option value="regime3">Régime 3</option>
-                </select>
                 <input class="research-button" type="submit" value="Rechercher">
             </form>
         </div>
@@ -72,6 +57,7 @@
             echo "Erreur : " . $e->getMessage();
         }
     }
+
     ?>
 
     <?php
