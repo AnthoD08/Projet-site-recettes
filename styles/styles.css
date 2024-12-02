@@ -210,3 +210,12 @@ footer {
   font-size: 20px;
   text-align: center;
 }
+
+.form-profil {
+  margin-left: 5rem;
+  padding-top: 40px;
+}
+
+.img-profil{
+  padding-top: 100px;
+}
