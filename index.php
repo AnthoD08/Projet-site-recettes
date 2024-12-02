@@ -33,7 +33,8 @@
             case "profil.php":
                 include(".//php/profil.php");
                 break;
-    
+                
+         
             // Dans le cas où $maRoute[0] vaut "recettes", on peut afficher plusieurs pages :
             // - la page d' "accueil" de la partie "recettes" du site qui liste toutes les recettes
             // - la page d'une recette spécifique, après avoir cliqué sur la Card de la recette, depuis la page de toutes les recettes
