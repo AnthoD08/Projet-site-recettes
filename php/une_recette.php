@@ -28,7 +28,7 @@
                 foreach ($recettes as $recette) {
                     echo "<div class='recette-card'>";
                     echo "<img src='" . htmlspecialchars($recette['image']) . "' alt='" . htmlspecialchars($recette['nom']) . "' class='recette-image'>";
-                    echo "<a href='ingredients.php?id=" . htmlspecialchars($recette['id_recette']) . "'>";
+                    echo "<a href='index.php?route=ingredients/" . htmlspecialchars($recette['id_recette']) . "'class='lien-recette'>";
                     echo "<h2 class='recette-title'>" . htmlspecialchars($recette['nom']) . "</h2>";
                     echo "</a>";
 

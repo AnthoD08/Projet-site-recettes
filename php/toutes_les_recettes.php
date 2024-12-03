@@ -27,21 +27,26 @@
     if ($recettes) {
       echo "<div class='recettes-container'>";
       foreach ($recettes as $recette) {
-          echo "<div class='recette-card'>";
-          echo "<img src='" . htmlspecialchars($recette['image']) . "' alt='" . htmlspecialchars($recette['nom']) . "' class='recette-image'>";
-          echo "<h2 class='recette-title'>" . htmlspecialchars($recette['nom']) . "</h2>";
-          echo "<p class='recette-description'>" . htmlspecialchars($recette['description']) . "</p>";
-          echo "</div>";
+        echo "<div class='recette-card'>";
+        echo "<a href='index.php?route=ingredients/" . htmlspecialchars($recette['id_recette']) . "'class='lien-recette'>";
+        echo "<img src='" . htmlspecialchars($recette['image']) . "' alt='" . htmlspecialchars($recette['nom']) . "' class='recette-image'>";
+        echo "<h2 class='recette-title'>" . htmlspecialchars($recette['nom']) . "</h2>";
+        echo "<p class='recette-description'>" . htmlspecialchars($recette['description']) . "</p>";
+        echo "</div>";
       }
       echo "</div>";
-  } else {
+    } else {
       echo "<div class='recette'><p>Aucune recette trouvée.</p></div>";
+    }
+  } catch (PDOException $e) {
+    echo "Erreur : " . $e->getMessage();
   }
-} catch (PDOException $e) {
-  echo "Erreur : " . $e->getMessage();
-}
 
-?>
+  ?>
+
+
+
+ 
 
 </body>
 
