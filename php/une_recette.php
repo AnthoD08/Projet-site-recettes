@@ -24,11 +24,11 @@
             $recettes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             if ($recettes) {
-                echo "<div class='recettes-container'>";
+                echo "<div class='une-recette-container'>";
                 foreach ($recettes as $recette) {
-                    echo "<div class='recette-card'>";
+                    echo "<div class='une-recette-card'>";
                     echo "<img src='" . htmlspecialchars($recette['image']) . "' alt='" . htmlspecialchars($recette['nom']) . "' class='recette-image'>";
-                    echo "<a href='index.php?route=ingredients/" . htmlspecialchars($recette['id_recette']) . "'class='lien-recette'>";
+                    echo ("<a href='ingredients/" . htmlspecialchars($recette['id_recette']) . "' class='lien-recette'>Voir la recette</a>");
                     echo "<h2 class='recette-title'>" . htmlspecialchars($recette['nom']) . "</h2>";
                     echo "</a>";
 
@@ -44,6 +44,11 @@
     }
     ?>
 
+
+
+    <?php
+    include('includes/footer.html');
+    ?>
 
 
 

@@ -28,8 +28,8 @@
       echo "<div class='recettes-container'>";
       foreach ($recettes as $recette) {
         echo "<div class='recette-card'>";
-        echo "<a href='index.php?route=ingredients/" . htmlspecialchars($recette['id_recette']) . "'class='lien-recette'>";
         echo "<img src='" . htmlspecialchars($recette['image']) . "' alt='" . htmlspecialchars($recette['nom']) . "' class='recette-image'>";
+        echo ("<a href='ingredients/" . htmlspecialchars($recette['id_recette']) . "' class='lien-recette'>Voir la recette</a>");
         echo "<h2 class='recette-title'>" . htmlspecialchars($recette['nom']) . "</h2>";
         echo "<p class='recette-description'>" . htmlspecialchars($recette['description']) . "</p>";
         echo "</div>";
@@ -45,8 +45,11 @@
   ?>
 
 
+  <?php
+  include('includes/footer.html');
+  ?>
 
- 
+
 
 </body>
 

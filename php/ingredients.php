@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <base href="http://localhost/projets/Projet-site-recettes/">
     <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
@@ -12,7 +13,7 @@
 
 
 <?php
-include './db/connexionBDD.php';
+include ('./db/connexionBDD.php');
 
 // Vérifiez si l'ID de recette est passé par le routeur
 if (isset($id_recette_demande)) {

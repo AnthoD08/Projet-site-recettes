@@ -7,7 +7,10 @@
 
 body {
   font-family: "Inter", sans-serif;
-  display: felx;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0;
 }
 
 header {
@@ -78,7 +81,7 @@ h1 {
 h2 {
   text-align: center;
   padding-top: 120px;
-  color:#e44d25;
+  color: #e44d25;
 }
 
 .titre-connexion {
@@ -163,7 +166,6 @@ input[type="text"] {
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-
 }
 
 .recette h2 {
@@ -187,15 +189,14 @@ input[type="text"] {
   color: white;
 }
 
-.form-profil{
+.form-profil {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
 }
 
-.img-profil{
+.img-profil {
   padding-top: 100px;
 }
 
@@ -212,37 +213,67 @@ input[type="password"] {
 }
 
 footer {
-  background: white;
+  margin-top: auto; 
   padding: 10px;
-  font-size: 20px;
+  background-color: white;
+  color: black;
   text-align: center;
+  position: relative;
+  width: 100%;
+ 
 }
 
 /* Conteneur principal des cartes de recettes */
 .recettes-container {
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-  gap: 20px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
-  justify-items: center; 
+  justify-items: center;
+}
+
+.une-recette-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; 
+  padding-top: 80px
+  
+}
+
+.une-recette-card{
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.une-recette-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Style des cartes de recettes */
 .recette-card {
   background-color: #fff;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; 
-  width: 100%; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Image des recettes */
 .recette-image {
   width: 100%;
   height: 200px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* Titre de la recette */
@@ -252,6 +283,15 @@ footer {
   color: #e44d25;
 }
 
+.lien-recette {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
 /* Description de la recette */
 .recette-description {
   font-size: 1em;
@@ -261,34 +301,33 @@ footer {
 
 /* Effet au survol de la carte */
 .recette-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .ingredients-container {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 20px; 
-  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   padding: 20px;
 }
 
 /* Style des cartes d'ingrédients */
 .ingredient-card {
   background-color: #f8f8f8;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 200px;
   padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ingredient-card h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
-  color: #333; 
+  color: #333;
 }
 
 .ingredient-card p {
@@ -296,12 +335,7 @@ footer {
   color: #666;
 }
 
-
 .ingredient-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-}
-
-.lien-recette{
-  text-decoration: none;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
