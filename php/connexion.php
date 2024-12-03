@@ -55,7 +55,7 @@
         // Vérification que le pseudo et le mdp sont les bons
         if ($_POST["inputName"] == $bonPseudo && $_POST["inputPassword"] == $bonMotDePasse) {
             $_SESSION["pseudo"] = $_POST["inputName"];
-            header("Location: profil.php");
+            header("Location: profil");
         } else {
             echo "Pseudo ou mot de passe incorrects !";
         }

@@ -4,10 +4,11 @@
 $maRoute = explode('/', $_GET["route"]);
 
 if (isset($maRoute[0])) {
-    
+
     switch ($maRoute[0]) {
-        
-        case "": case "accueil":
+
+        case "":
+        case "accueil":
             include("./php/accueil.php");
             break;
 
@@ -19,22 +20,28 @@ if (isset($maRoute[0])) {
             include("./php/connexion.php");
             break;
 
-        case "profil.php":
+        case "profil":
             include("./php/profil.php");
             break;
-            
-        case "une_recette.php":
+
+        case "deconnexion":
+            include("./php/deconnexion.php");
+            break;
+
+
+        case "une_recette":
             include("./php/une_recette.php");
             break;
 
         case "recettes":
             if (isset($maRoute[1])) {
-                
+
                 switch ($maRoute[1]) {
-                    case "": case "toutes":
+                    case "":
+                    case "toutes":
                         include("./php/toutes_les_recettes.php");
                         break;
-                    
+
                     default:
                         if (is_numeric($maRoute[1])) {
                             $id_recette_demande = $maRoute[1];
@@ -43,15 +50,13 @@ if (isset($maRoute[0])) {
                             include("./pages/erreur404.html");
                         }
                         break;
-
                 }
-
             } else {
                 include("./php/toutes_les_recettes.php");
             }
             break;
 
-        // Nouveau cas pour les ingrédients
+            // Nouveau cas pour les ingrédients
         case "ingredients":
             if (isset($maRoute[1]) && is_numeric($maRoute[1])) {
                 $id_recette_demande = $maRoute[1]; // Récupérer l'ID de la recette
@@ -65,8 +70,6 @@ if (isset($maRoute[0])) {
             include("./pages/erreur404.html");
             break;
     }
-
 } else {
     include("./pages/erreur404.html");
 }
-?>

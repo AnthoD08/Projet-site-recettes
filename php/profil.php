@@ -87,7 +87,7 @@ echo ("Bonjour " . $_SESSION["pseudo"] . " ! <br><br>");
 
 <br><br><br>
 
-<a href="deconnexion.php">Se déconnecter</a>
+<a href="deconnexion">Se déconnecter</a>
 
 
 

@@ -18,7 +18,7 @@
         <img src="images/slider.jpg" class="slider-background" alt="" />
         <div class="slider-content">
             <h1>Mon site de cuisine</h1>
-            <form class="form-recette" method="POST" action="une_recette.php">
+            <form class="form-recette" method="POST" action="une_recette">
                 <label for="nom_recette">Nom de la recette :</label>
                 <input type="text" id="nom_recette" name="nom_recette" placeholder="Entrez un nom de recette" required>
                 <input class="research-button" type="submit" value="Rechercher">
