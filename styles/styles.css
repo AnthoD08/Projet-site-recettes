@@ -163,6 +163,7 @@ input[type="text"] {
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+
 }
 
 .recette h2 {
@@ -170,6 +171,7 @@ input[type="text"] {
   color: #333;
   text-align: center;
 }
+
 .recette p {
   color: #666;
 }
@@ -185,11 +187,16 @@ input[type="text"] {
   color: white;
 }
 
-.form-profil {
+.form-profil{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+}
+
+.img-profil{
+  padding-top: 100px;
 }
 
 .input-group {
@@ -209,13 +216,4 @@ footer {
   padding: 10px;
   font-size: 20px;
   text-align: center;
-}
-
-.form-profil {
-  margin-left: 5rem;
-  padding-top: 40px;
-}
-
-.img-profil{
-  padding-top: 100px;
 }
