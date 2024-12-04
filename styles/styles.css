@@ -204,6 +204,7 @@ input[type="text"] {
 
 .input-group {
   margin-bottom: 15px;
+  color:black;
 }
 
 input[type="password"] {

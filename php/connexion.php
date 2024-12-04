@@ -9,9 +9,8 @@
 </head>
 
 <body>
-
+    
     <?php include('includes/navbar.html'); ?>
-
 
     <div class="container">
         <h2 class="titre-connexion">Connexion</h2>
@@ -33,7 +32,6 @@
     include './db/connexionBDD.php';
 
 
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $pseudo = htmlspecialchars($_POST['inputName']);
@@ -46,7 +44,7 @@
 
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
+        var_dump($user);
         if ($user) {
 
             if (password_verify($password, $user['mot_de_passe'])) {
