@@ -4,14 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="styles/styles.css" />
-
 </head>
 
-
 <body>
-
 
     <?php include('includes/navbar.html'); ?>
 
@@ -30,38 +27,45 @@
             <button type="submit">Se connecter</button>
         </form>
     </div>
-    <!-- Traitement PHP des données du formulaire -->
 
     <?php
-
     session_start();
-    $bonPseudo = "anthony";
-    $bonMotDePasse = "123";
+    include './db/connexionBDD.php';
 
 
-    // Si le formulaire a été envoyé
-    if ($_POST) {
 
-        // Vérification du pseudo
-        if (isset($_POST["inputName"]) && !empty($_POST["inputName"])) {
-            $_POST["inputName"] = htmlspecialchars($_POST["inputName"]);
-        }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        // Vérification du mot de passe
-        if (isset($_POST["inputPassword"]) && !empty($_POST["inputPassword"])) {
-            $_POST["inputPassword"] = htmlspecialchars($_POST["inputPassword"]);
-        }
+        $pseudo = htmlspecialchars($_POST['inputName']);
+        $password = htmlspecialchars($_POST['inputPassword']);
 
-        // Vérification que le pseudo et le mdp sont les bons
-        if ($_POST["inputName"] == $bonPseudo && $_POST["inputPassword"] == $bonMotDePasse) {
-            $_SESSION["pseudo"] = $_POST["inputName"];
-            header("Location: profil");
+
+        $query = "SELECT * FROM utilisateurs WHERE pseudo = :pseudo";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute(['pseudo' => $pseudo]);
+
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user) {
+
+            if (password_verify($password, $user['mot_de_passe'])) {
+
+                $_SESSION['pseudo'] = $user['pseudo'];
+                $_SESSION['id_role'] = $user['id_role'];
+
+
+                header("Location: profil");
+                exit();
+            } else {
+
+                echo "<p>Pseudo ou mot de passe incorrect.</p>";
+            }
         } else {
-            echo "Pseudo ou mot de passe incorrects !";
+
+            echo "<p>Pseudo ou mot de passe incorrect.</p>";
         }
     }
-
-
     ?>
 
 </body>

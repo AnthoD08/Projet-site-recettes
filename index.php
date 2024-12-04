@@ -16,6 +16,10 @@ if (isset($maRoute[0])) {
             include("./php/contact.php");
             break;
 
+        case "inscription":
+            include("./php/inscription.php");
+            break;
+
         case "connexion":
             include("./php/connexion.php");
             break;
