@@ -9,7 +9,7 @@
 </head>
 
 <?php
-include('includes/navbar.html');
+include('includes/navbar.php');
 
 ?>
 
