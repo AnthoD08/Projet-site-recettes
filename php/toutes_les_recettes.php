@@ -47,7 +47,7 @@
       var_dump($_SESSION["permissions"]);
     }
   } catch (\Throwable $th) {
-    //throw $th;
+   
   }
   ?>
 
