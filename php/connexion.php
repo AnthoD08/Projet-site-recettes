@@ -46,12 +46,15 @@
                 // Enregistrement des données utilisateur dans la session
                 $_SESSION['pseudo'] = $user['pseudo'];
                 $_SESSION['id_role'] = $user['id_role'];
-
+                $_SESSION['id_utilisateur'] = $user['id_utilisateur'];
+                
+                // récupérer les permissions dont l'id utilisateur vaut $user
+                
                 // Redirection vers le profil ou la page d'accueil en fonction du rôle
                 if ($_SESSION['id_role'] == 3) {
-                    header("Location: profil"); // Rediriger vers la page profil
+                    header("Location: accueil"); // Rediriger vers la page profil
                 } else {
-                    header("Location: accueil"); // Rediriger vers la page d'accueil pour les autres rôles
+                    header("Location: backoffice"); // Rediriger vers la page d'accueil pour les autres rôles
                 }
 
                 exit();

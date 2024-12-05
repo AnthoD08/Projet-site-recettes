@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+  <?php session_start(); ?>
   <?php include('includes/navbar.php'); ?>
 
   <h2>Toutes les recettes</h2>
@@ -42,6 +42,13 @@
     echo "Erreur : " . $e->getMessage();
   }
 
+  try {
+    if (isset($_SESSION["permissions"])) {
+      var_dump($_SESSION["permissions"]);
+    }
+  } catch (\Throwable $th) {
+    //throw $th;
+  }
   ?>
 
 
