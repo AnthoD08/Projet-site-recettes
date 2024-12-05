@@ -11,7 +11,7 @@
 
 <body>
 
-  <?php include('includes/navbar.html'); ?>
+  <?php include('includes/navbar.php'); ?>
 
   <h2>Toutes les recettes</h2>
 

@@ -3,14 +3,13 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 
 body {
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
 }
@@ -84,12 +83,6 @@ h2 {
   text-align: center;
   padding-top: 120px;
   color: #e44d25;
-}
-
-.titre-connexion {
-  text-align: center;
-  color: black;
-  padding-bottom: 30px;
 }
 
 .slider {
@@ -180,17 +173,6 @@ input[type="text"] {
   color: #666;
 }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  margin-bottom: 20px;
-  padding-top: 50px;
-  color: white;
-}
-
 .form-profil {
   position: absolute;
   top: 50%;
@@ -202,11 +184,6 @@ input[type="text"] {
   padding-top: 100px;
 }
 
-.input-group {
-  margin-bottom: 15px;
-  color:black;
-}
-
 input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -216,14 +193,13 @@ input[type="password"] {
 }
 
 footer {
-  margin-top: auto; 
+  margin-top: auto;
   padding: 10px;
   background-color: white;
   color: black;
   text-align: center;
   position: relative;
   width: 100%;
- 
 }
 
 /* Conteneur principal des cartes de recettes */
@@ -239,12 +215,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1; 
-  padding-top: 80px
-  
+  flex-grow: 1;
+  padding-top: 80px;
 }
 
-.une-recette-card{
+.une-recette-card {
   width: 300px;
   padding: 20px;
   border: 1px solid #ddd;
@@ -342,4 +317,3 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-

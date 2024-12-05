@@ -10,7 +10,7 @@
 
 <body>
 
-    <?php include('includes/navbar.html'); ?>
+    <?php include('includes/navbar.php'); ?>
 
     <?php
     include './db/connexionBDD.php';
