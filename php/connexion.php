@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <?php include('includes/navbar.html'); ?>
 
     <div class="container">
@@ -33,7 +33,7 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+        
         $pseudo = htmlspecialchars($_POST['inputName']);
         $password = htmlspecialchars($_POST['inputPassword']);
 
@@ -58,6 +58,7 @@
             } else {
 
                 echo "<p>Pseudo ou mot de passe incorrect.</p>";
+                
             }
         } else {
 
