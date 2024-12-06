@@ -1,29 +1,36 @@
+<?php
+session_start();  // Démarrage de la session au tout début
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire PHP</title>
+    <title>Mon Profil</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-    <?php include('includes/navbar.html'); ?>
+    <?php include('includes/navbar.php'); ?>
+
     <?php
+    // Vérifie si l'utilisateur est connecté
+    if (!isset($_SESSION["pseudo"]) || empty($_SESSION["pseudo"])) {
+        header("Location: connexion");
+        exit();
+    }
+    ?>
 
+    <h1>Bonjour <?php echo htmlspecialchars($_SESSION["pseudo"]); ?> !</h1>
 
-
-    session_start();
-    $_SESSION["pseudo"] = "anthony";
-
+    <?php
     // Dossier pour stocker les photos téléchargées
     $uploadDir = "uploads/";
     // Nom par défaut pour la photo de profil
     $defaultProfilePic = "profile.jpg"; // Image par défaut, à ajouter dans le dossier uploads
-
-
 
     // Vérifie si un fichier a été téléchargé via le formulaire
     if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] == 0) {
@@ -53,22 +60,10 @@
             $error = "Seuls les formats JPG, JPEG, PNG et GIF sont autorisés.";
         }
     } else {
-
         // Utilise l'image par défaut si aucune image n'a été téléchargée
         $profilePic = $uploadDir . $defaultProfilePic;
     }
-
     ?>
-
-
-    <!-- Sécurité : on redirige vers la page de formulaire si on n'est pas connecté -->
-    <?php
-    if (!isset($_SESSION["pseudo"]) || empty($_SESSION["pseudo"])) {
-        header("Location: connexion");
-    }
-    echo ("Bonjour " . $_SESSION["pseudo"] . " ! <br><br>");
-    ?>
-
 
     <!-- Affichage de la photo de profil actuelle -->
     <div class="img-profil">
@@ -76,21 +71,15 @@
     </div>
 
     <!-- Formulaire de téléchargement de la nouvelle photo de profil -->
-
     <form class="form-profil" action="" method="post" enctype="multipart/form-data">
         <label for="profile_pic">Choisir une nouvelle photo de profil :</label>
         <input type="file" name="profile_pic" id="profile_pic" required>
         <button type="submit">Mettre à jour la photo</button>
     </form>
 
-
-
     <br><br><br>
 
     <a href="deconnexion">Se déconnecter</a>
-
-
-
 
 </body>
 

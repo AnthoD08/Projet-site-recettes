@@ -9,8 +9,9 @@
 </head>
 
 <body>
-
-    <?php include('includes/navbar.html'); ?>
+    
+    <?php session_start(); ?>
+    <?php include('includes/navbar.php'); ?>
 
     <?php
     include './db/connexionBDD.php';

@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
-<?php
-include('includes/navbar.html');
+
+<?php session_start(); ?>
+<?php include('includes/navbar.php'); ?>
 
 ?>
 
 <body>
-    
+
     <h2>Me contacter</h2>
 
 </body>

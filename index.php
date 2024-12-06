@@ -23,6 +23,10 @@ if (isset($maRoute[0])) {
         case "connexion":
             include("./php/connexion.php");
             break;
+            
+        case "backoffice":
+            include("./php/backoffice.php");
+            break;
 
         case "profil":
             include("./php/profil.php");

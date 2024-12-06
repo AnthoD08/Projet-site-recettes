@@ -11,7 +11,7 @@
 <body>
     <?php session_start(); ?>
 
-    <?php include('includes/navbar.html'); ?>
+    <?php include('includes/navbar.php'); ?>
 
 
     <div class="slider">
