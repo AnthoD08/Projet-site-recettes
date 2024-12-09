@@ -22,25 +22,18 @@ session_start();  // Démarrage de la session au tout début
         header("Location: connexion");
         exit();
     }
-    ?>
 
-    <h1>Bonjour <?php echo htmlspecialchars($_SESSION["pseudo"]); ?> !</h1>
-
-    <?php
     // Dossier pour stocker les photos téléchargées
     $uploadDir = "uploads/";
     // Nom par défaut pour la photo de profil
     $defaultProfilePic = "profile.jpg"; // Image par défaut, à ajouter dans le dossier uploads
 
-    // Vérifie si un fichier a été téléchargé via le formulaire
+    // Si un fichier a été téléchargé, traiter l'image
     if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] == 0) {
 
         // Récupère les informations du fichier
         $fileName = basename($_FILES['profile_pic']['name']);
-
-        // Ici, on souhaite renommer le fichier avec le pseudo de l'utilisateur
-        $fileName = $_SESSION["pseudo"] . ".jpg";
-
+        $fileName = $_SESSION["pseudo"] . ".jpg"; // Renommer l'image avec le pseudo de l'utilisateur
         $targetFile = $uploadDir . $fileName;
         $fileType = pathinfo($targetFile, PATHINFO_EXTENSION);
 
@@ -51,19 +44,26 @@ session_start();  // Démarrage de la session au tout début
 
             // Déplace le fichier dans le dossier uploads
             if (move_uploaded_file($_FILES['profile_pic']['tmp_name'], $targetFile)) {
-                // Définit la nouvelle image de profil
-                $profilePic = $targetFile;
+                // Enregistre le chemin de l'image dans la session
+                $_SESSION['profile_pic'] = $targetFile;
             } else {
                 $error = "Erreur lors du téléchargement de l'image.";
             }
         } else {
             $error = "Seuls les formats JPG, JPEG, PNG et GIF sont autorisés.";
         }
+    }
+
+    // Vérifie si une photo de profil personnalisée est stockée dans la session
+    if (isset($_SESSION['profile_pic']) && !empty($_SESSION['profile_pic'])) {
+        $profilePic = $_SESSION['profile_pic'];
     } else {
-        // Utilise l'image par défaut si aucune image n'a été téléchargée
+        // Sinon, utilise l'image par défaut
         $profilePic = $uploadDir . $defaultProfilePic;
     }
     ?>
+
+    <h1>Bonjour <?php echo htmlspecialchars($_SESSION["pseudo"]); ?> !</h1>
 
     <!-- Affichage de la photo de profil actuelle -->
     <div class="img-profil">
