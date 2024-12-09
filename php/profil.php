@@ -79,7 +79,7 @@ session_start();  // Démarrage de la session au tout début
 
     <br><br><br>
 
-    <a href="deconnexion">Se déconnecter</a>
+    <a class="bouton-deconnexion" href="deconnexion">Se déconnecter</a>
 
 </body>
 

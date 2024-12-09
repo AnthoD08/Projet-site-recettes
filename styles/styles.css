@@ -139,7 +139,7 @@ input[type="text"] {
 }
 
 .research-button {
-  background-color: #53af57;
+  background-color: #45a049;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -151,7 +151,7 @@ input[type="text"] {
 .research-button:hover {
   background-color: white;
   color: #53af57;
-  border: 1px solid #53af57;
+  border: 1px solid #45a049;
 }
 
 .recette {
@@ -173,15 +173,65 @@ input[type="text"] {
   color: #666;
 }
 
-.form-profil {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.img-profil {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.img-profil {
-  padding-top: 100px;
+.img-profil img {
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Formulaire pour télécharger la photo de profil */
+.form-profil {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-profil label {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #555;
+}
+
+.form-profil input[type="file"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.form-profil button {
+  padding: 10px 20px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-profil button:hover {
+  background-color: #45a049;
+}
+
+.bouton-deconnexion {
+  text-align: center;
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.bouton-deconnexion:hover {
+  text-decoration: underline;
 }
 
 input[type="password"] {
