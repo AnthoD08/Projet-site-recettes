@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  
 }
 
 header {
@@ -367,3 +368,5 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+
